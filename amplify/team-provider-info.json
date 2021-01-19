@@ -1,0 +1,27 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-rissu-dev-142619-authRole",
+      "UnauthRoleArn": "arn:aws:iam::509955021305:role/amplify-rissu-dev-142619-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::509955021305:role/amplify-rissu-dev-142619-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-rissu-dev-142619-deployment",
+      "UnauthRoleName": "amplify-rissu-dev-142619-unauthRole",
+      "StackName": "amplify-rissu-dev-142619",
+      "StackId": "arn:aws:cloudformation:eu-west-1:509955021305:stack/amplify-rissu-dev-142619/42dbdb00-5735-11eb-b8bd-028e1cddad27",
+      "AmplifyAppId": "d1lny8d7mn0azx"
+    },
+    "categories": {
+      "function": {
+        "rissu51dab7b3CustomMessage": {
+          "REDIRECTURL": "https://rissu51dab7b3-51dab7b3.auth.eu-central-1.amazoncognito.com/",
+          "EMAILSUBJECT": "Rissu account confirmation",
+          "EMAILMESSAGE": "Thank you for confirming your Rissu account email."
+        }
+      },
+      "auth": {
+        "rissu51dab7b3": {}
+      }
+    }
+  }
+}

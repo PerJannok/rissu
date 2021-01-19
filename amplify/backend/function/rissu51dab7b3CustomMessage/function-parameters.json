@@ -1,0 +1,25 @@
+{
+  "trigger": true,
+  "modules": [
+    "verification-link"
+  ],
+  "parentResource": "rissu51dab7b3",
+  "functionName": "rissu51dab7b3CustomMessage",
+  "resourceName": "rissu51dab7b3CustomMessage",
+  "parentStack": "auth",
+  "triggerEnvs": [
+    {
+      "key": "RESOURCENAME",
+      "value": "resourceName"
+    }
+  ],
+  "triggerDir": "C:\\Users\\PerJannok\\AppData\\Roaming\\npm\\node_modules\\@aws-amplify\\cli\\node_modules\\amplify-category-auth\\provider-utils\\awscloudformation\\triggers\\CustomMessage",
+  "triggerTemplate": "CustomMessage.json.ejs",
+  "roleName": "rissu51dab7b3CustomMessage",
+  "skipEdit": true,
+  "REDIRECTURL": "https://rissu51dab7b3-51dab7b3.auth.eu-central-1.amazoncognito.com/",
+  "EMAILSUBJECT": "Rissu account confirmation",
+  "EMAILMESSAGE": "Thank you for confirming your Rissu account email.",
+  "RESOURCENAME": "resourceName",
+  "enableCors": false
+}

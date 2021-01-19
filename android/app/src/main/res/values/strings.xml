@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">rissu</string>
+    <string name="title_activity_main">rissu</string>
+    <string name="package_name">com.rissu.app</string>
+    <string name="custom_url_scheme">com.rissu.app</string>
+</resources>
