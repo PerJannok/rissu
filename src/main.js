@@ -1,10 +1,12 @@
 import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Amplify from 'aws-amplify';
+import '@aws-amplify/ui-vue';
+import aws_exports from './aws-exports';
+
 import App from './App.vue'
 import router from "./router";
 
-import '@aws-amplify/ui-vue';
-import aws_exports from './aws-exports';
-import Amplify from 'aws-amplify';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -19,6 +21,8 @@ Amplify.configure(aws_exports);
 Vue.config.productionTip = false;
 
 Vue.prototype.$Amplify = Amplify;
+
+Vue.use(VueRouter)
 
 // Enable the FontAwesomeIcon component globally
 Vue.component('font-awesome-icon', FontAwesomeIcon)

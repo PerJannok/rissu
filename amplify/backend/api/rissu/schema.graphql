@@ -3,3 +3,10 @@ type Todo @model {
   name: String!
   description: String
 }
+
+type Chat @model {
+  id: ID!
+  user: String!
+  message: String!
+  createdAt: AWSDateTime
+}

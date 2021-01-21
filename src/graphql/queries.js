@@ -30,3 +30,32 @@ export const listTodos = /* GraphQL */ `
     }
   }
 `;
+export const getChat = /* GraphQL */ `
+  query GetChat($id: ID!) {
+    getChat(id: $id) {
+      id
+      user
+      message
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listChats = /* GraphQL */ `
+  query ListChats(
+    $filter: ModelChatFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listChats(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        user
+        message
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;

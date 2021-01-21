@@ -34,3 +34,36 @@ export const onDeleteTodo = /* GraphQL */ `
     }
   }
 `;
+export const onCreateChat = /* GraphQL */ `
+  subscription OnCreateChat {
+    onCreateChat {
+      id
+      user
+      message
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateChat = /* GraphQL */ `
+  subscription OnUpdateChat {
+    onUpdateChat {
+      id
+      user
+      message
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteChat = /* GraphQL */ `
+  subscription OnDeleteChat {
+    onDeleteChat {
+      id
+      user
+      message
+      createdAt
+      updatedAt
+    }
+  }
+`;

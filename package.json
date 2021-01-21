@@ -8,6 +8,8 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@aws-amplify/core": "^3.8.9",
+    "@aws-amplify/datastore": "^2.9.3",
     "@aws-amplify/ui-vue": "^0.2.33",
     "@capacitor/android": "^2.4.6",
     "@capacitor/cli": "^2.4.6",
