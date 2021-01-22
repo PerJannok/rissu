@@ -2,6 +2,7 @@
   <div class="container">
     <button @click="signinFacebook" class="federatedbutton facebook"><font-awesome-icon :style="{ color: 'white' }" :icon="['fab', 'facebook']" /><p class="text">Sign in with Facebook</p></button>
     <button @click="signinGoogle" class="federatedbutton google"><font-awesome-icon :style="{ color: 'red' }" :icon="['fab', 'google']" /><p class="text greytext">Sign in with Google</p></button>
+    <div class="authenticator">
     <amplify-authenticator username-alias="email">
       <amplify-sign-up
         slot="sign-up"
@@ -14,8 +15,11 @@
         username-alias="email"
         header-text="Custom Sign in"
         :form-fields.prop="formFieldsSignIn"
-      ></amplify-sign-in>
+      >
+        <div slot="federated-buttons"></div><!-- empty div in order to hide federated button / Amplify hosted UI -->
+      </amplify-sign-in>
     </amplify-authenticator>
+    </div>
   </div>
 </template>
 
@@ -65,11 +69,19 @@ export default {
 <style>
 
 .container {
-  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.authenticator {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5vmin;
 }
 
 .federatedbutton {
@@ -79,7 +91,7 @@ export default {
   justify-content: flex-start;
   display: flex;
   align-items: center;
-  padding: 0px 16px;
+  padding: 0px 15px;
   border-radius: 2;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, .3);
   cursor: pointer;
