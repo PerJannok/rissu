@@ -7,6 +7,9 @@ export const onCreateTodo = /* GraphQL */ `
       id
       name
       description
+      _version
+      _deleted
+      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -18,6 +21,9 @@ export const onUpdateTodo = /* GraphQL */ `
       id
       name
       description
+      _version
+      _deleted
+      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -29,6 +35,9 @@ export const onDeleteTodo = /* GraphQL */ `
       id
       name
       description
+      _version
+      _deleted
+      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -41,6 +50,9 @@ export const onCreateChat = /* GraphQL */ `
       user
       message
       createdAt
+      _version
+      _deleted
+      _lastChangedAt
       updatedAt
     }
   }
@@ -52,6 +64,9 @@ export const onUpdateChat = /* GraphQL */ `
       user
       message
       createdAt
+      _version
+      _deleted
+      _lastChangedAt
       updatedAt
     }
   }
@@ -63,6 +78,9 @@ export const onDeleteChat = /* GraphQL */ `
       user
       message
       createdAt
+      _version
+      _deleted
+      _lastChangedAt
       updatedAt
     }
   }

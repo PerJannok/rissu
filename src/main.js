@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Amplify from 'aws-amplify';
+import Amplify from "@aws-amplify/core";
 import '@aws-amplify/ui-vue';
 import aws_exports from './aws-exports';
+import { DataStore } from "@aws-amplify/datastore";
 
 import App from './App.vue'
 import router from "./router";
@@ -17,6 +18,9 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(fab, fas, far);
 
 Amplify.configure(aws_exports);
+DataStore.configure(aws_exports);
+
+Amplify.Logger.LOG_LEVEL = 'DEBUG';
 
 Vue.config.productionTip = false;
 

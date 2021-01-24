@@ -10,6 +10,9 @@ export const createTodo = /* GraphQL */ `
       id
       name
       description
+      _version
+      _deleted
+      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -24,6 +27,9 @@ export const updateTodo = /* GraphQL */ `
       id
       name
       description
+      _version
+      _deleted
+      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -38,6 +44,9 @@ export const deleteTodo = /* GraphQL */ `
       id
       name
       description
+      _version
+      _deleted
+      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -53,6 +62,9 @@ export const createChat = /* GraphQL */ `
       user
       message
       createdAt
+      _version
+      _deleted
+      _lastChangedAt
       updatedAt
     }
   }
@@ -67,6 +79,9 @@ export const updateChat = /* GraphQL */ `
       user
       message
       createdAt
+      _version
+      _deleted
+      _lastChangedAt
       updatedAt
     }
   }
@@ -81,6 +96,9 @@ export const deleteChat = /* GraphQL */ `
       user
       message
       createdAt
+      _version
+      _deleted
+      _lastChangedAt
       updatedAt
     }
   }

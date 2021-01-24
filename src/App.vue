@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { Auth, Hub } from 'aws-amplify'
+import { Auth, DataStore, Hub } from 'aws-amplify'
 
 export default {
   name: 'app',
@@ -35,7 +35,7 @@ export default {
     }
   },
   beforeCreate() {
-    Hub.listen('auth', data => {
+    Hub.listen('auth', async data => {
       console.log('data:', data)
       const { payload } = data
       if (payload.event === 'signIn') {
@@ -43,6 +43,7 @@ export default {
         this.$router.push('/profile')
       }
       if (payload.event === 'signOut') {
+        await DataStore.clear();
         this.$router.push('/auth')
         this.signedIn = false
       }

@@ -3,6 +3,7 @@
     <h1>These are the ToDo:s</h1>
     <div v-for="todo of todos" :key="todo.id">
       {{todo.name}}
+      {{todo.description}}
     </div>
   </div>
 </template>

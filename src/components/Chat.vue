@@ -23,6 +23,7 @@ export default {
     return {
       messages: [],
       form: {},
+      subscription: undefined,
     }
   },
   computed: {
@@ -32,7 +33,16 @@ export default {
   },
   created() {
     this.currentUser();
+    //Subscribe to changes
+    this.subscription = DataStore.observe(Chat).subscribe(msg => {
+      console.log(msg.model, msg.opType, msg.element);
+      this.loadMessages();
+    });    
   },
+  destroyed() {
+    if (!this.subscription) return;
+    this.subscription.unsubscribe();
+  },  
   methods: {
     moment: () => moment(),
     currentUser() {
