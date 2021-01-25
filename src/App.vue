@@ -25,7 +25,8 @@
 </template>
 
 <script>
-import { Auth, DataStore, Hub } from 'aws-amplify'
+import { DataStore, Hub } from 'aws-amplify'
+import { Auth } from "@aws-amplify/auth";
 
 export default {
   name: 'app',

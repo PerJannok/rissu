@@ -11,11 +11,12 @@ import router from "./router";
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import { far } from '@fortawesome/free-regular-svg-icons'
+
+library.add(fab);
+
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(fab, fas, far);
+
 
 Amplify.configure(aws_exports);
 DataStore.configure(aws_exports);
@@ -26,10 +27,13 @@ Vue.config.productionTip = false;
 
 Vue.prototype.$Amplify = Amplify;
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
+
 
 // Enable the FontAwesomeIcon component globally
 Vue.component('font-awesome-icon', FontAwesomeIcon)
+
+Vue.use(Amplify);
 
 new Vue({
   router,

@@ -5,7 +5,7 @@
       <button @click="sendMessage">Send</button>
     </form>
     <div v-for="message of sorted" :key="message.id">
-      <div>{{ message.user }} ({{ moment(message.createdAt).format('YYYY-MM-DD HH:mm:ss')}})</div>
+      <div>{{ message.user }} ({{ message.createdAt}})</div>
       <div>{{ message.message }}</div>
     </div>
   </div>
@@ -14,8 +14,7 @@
 <script>
 import { DataStore, Predicates } from "@aws-amplify/datastore";
 import { Chat } from "../models";
-import moment from "moment";
-import { Auth } from "aws-amplify";
+import { Auth } from "@aws-amplify/auth";
 
 export default {
   name: 'protected',
@@ -44,7 +43,6 @@ export default {
     this.subscription.unsubscribe();
   },  
   methods: {
-    moment: () => moment(),
     currentUser() {
       Auth.currentAuthenticatedUser().then(user => {
         this.user = user;
