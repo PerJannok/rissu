@@ -1,5 +1,11 @@
 # rissu
 
+## To setup new Amplify project
+Amplify configure
+
+see https://github.com/aws-amplify/amplify-cli/issues/5513#issuecomment-771665979
+
+
 ## Project setup
 ```
 npm install
